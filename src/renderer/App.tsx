@@ -1,8 +1,11 @@
 import { MemoryRouter as Router, Routes, Route } from 'react-router-dom';
 import { useState, useEffect } from 'react';
 import RestCard from './components/RestCard';
-
 import './App.css';
+
+const sendMessage = () => {
+  window.electron.terminalMessage("This might work")
+}
 
 function Hello() {
   const [restList, setRestList] = useState<any>();
@@ -16,7 +19,7 @@ function Hello() {
 
   return (
     <div className='App'>
-      <div className="Hello">
+      <div className="Hello" onClick={sendMessage}>
         <h1>Electron Restaurant List</h1>
       </div>
       <div className="Hello">
