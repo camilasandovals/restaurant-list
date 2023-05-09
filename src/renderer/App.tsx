@@ -4,7 +4,7 @@ import RestCard from './components/RestCard';
 import './App.css';
 
 const sendMessage = () => {
-  window.electron.terminalMessage("This might work")
+  window.electron.terminalMessage("User clicked h1");
 }
 
 function Hello() {
