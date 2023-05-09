@@ -25,6 +25,12 @@ class AppUpdater {
 
 let mainWindow: BrowserWindow | null = null;
 
+ipcMain.on('cli-msg', (event, arg) => {
+  console.log('------MESSAGE FROM RENDERER-----');
+  console.log(arg);
+  console.log('--------------------------------');
+});
+
 ipcMain.on('ipc-example', async (event, arg) => {
   const msgTemplate = (pingPong: string) => `IPC test: ${pingPong}`;
   console.log(msgTemplate(arg));
