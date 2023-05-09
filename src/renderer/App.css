@@ -18,7 +18,10 @@ body {
   justify-content: center;
   align-items: center;
 }
-
+.App{
+  max-height: 100vh;
+  overflow-y: scroll;
+}
 button {
   background-color: white;
   padding: 10px 20px;

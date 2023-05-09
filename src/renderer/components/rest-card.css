@@ -1,7 +1,21 @@
+
+.rest-list{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
+}
 .rest-card{
   width: 300px;
   background-color: whitesmoke;
   color: #303030;
   border-radius: 10px;
   border: 2px solid #303030
+}
+
+.rest-card img {
+  width: 280px;
+  margin: 10px;
+  border-radius: 6px;
 }

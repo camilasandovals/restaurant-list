@@ -15,14 +15,18 @@ function Hello() {
   }, []);
 
   return (
-    <div>
-      <h1>Electron Restaurant List</h1>
+    <div className='App'>
+      <div className="Hello">
+        <h1>Electron Restaurant List</h1>
+      </div>
       <div className="Hello">
         {!restList
         ? <h2>Loading</h2>
-        : restList.map((rest) => (
-          <RestCard rest = {rest} key={rest.id} />
+        : <div className = 'rest-list'>
+          {restList.map((rest) => (
+          <RestCard rest = { rest } key={ rest.id } />
         ))}
+        </div>}
       </div>
     </div>
   );
